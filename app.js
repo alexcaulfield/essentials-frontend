@@ -11,7 +11,9 @@ function getAuth() {
 }
 
 function createPlaylist() {
-    $.get("http://localhost:5000/findArtist")
+    var artistName = document.getElementById('artist').value;
+    var playlistName = document.getElementById('playlist').value;
+    $.get("http://localhost:5000/findArtist", {artistName: artistName, playlistName: playlistName})
      .done(function(data) {
         console.log(data);
     });

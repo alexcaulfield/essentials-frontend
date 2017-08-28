@@ -4,7 +4,7 @@
 		<script type="text/javascript" src="app.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="canvasjs.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="essentials.css">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	</head>
@@ -12,18 +12,19 @@
         <div style="padding: 1%;">
             <button class="btn btn-primary text-center" onclick="getAuth()">Authorize</button>
         </div>
-            
+
         <h1 class="text-center">
             ESSENTIALS
         </h1>
         <p class="text-center">
             Create a playlists that sounds like your favorite new artist.
         </p>
-        
+
         <div class=row>
             <div class="col-md-offset-4 text-center">
                 <div class="col-xs-6">
-                    <input type="text" class="form-control input-md" placeholder="Artist name"><br>
+                    <input type="text" id="artist" class="form-control input-md" placeholder="Artist name"><br>
+                    <input type="text" id= "playlist" class="form-control input-md" placeholder="Playlist name"><br>
                     <button class="btn btn-primary text-center" onclick="createPlaylist()">Create Playlist</button>
                 </div>
             </div>

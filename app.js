@@ -1,10 +1,22 @@
-function createPlaylist() {
+var spotifyApi;
+
+function getAuth() {
 	$.get("http://localhost:5000/", function(data) {
-		$.get("http://localhost:5000/findArtist", function(data) {
-			console.log(data);
-		});
+
+        authorization_window = window.open(
+            data,
+            '_blank'
+        );
 	});
 }
+
+function createPlaylist() {
+    $.get("http://localhost:5000/findArtist")
+     .done(function(data) {
+        console.log(data);
+    });
+}
+
 
 var topTracks = [];
 var topTracksInfo = [];
